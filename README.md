@@ -1,18 +1,97 @@
-# React + Vite
+# Style Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+فروشگاه اینترنتی لباس و اکسسوری با رابط کاربری راست‌به‌چپ، ساخته‌شده با React و Vite.
 
-Currently, two official plugins are available:
+این پروژه یک فرانت‌اند کامل برای فروشگاه مد است که صفحات اصلی خرید، دسته‌بندی محصولات، جزئیات محصول، سبد خرید، پرداخت، علاقه‌مندی‌ها و پنل حساب کاربری را پوشش می‌دهد.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## امکانات
 
-## React Compiler
+- صفحه اصلی فروشگاه با بخش‌های محصولات جدید، پیشنهادها و دسته‌بندی‌ها
+- دسته‌بندی محصولات مردانه، زنانه و بچگانه
+- صفحه همه محصولات، محصولات جدید و محصولات تخفیف‌دار
+- فیلتر و مرتب‌سازی محصولات بر اساس دسته‌بندی، رنگ، سایز، قیمت و تخفیف
+- جست‌وجوی محصولات
+- صفحه جزئیات محصول با انتخاب رنگ، سایز و تصویر محصول
+- سبد خرید با امکان افزایش، کاهش و حذف آیتم‌ها
+- صفحه پرداخت و ثبت سفارش
+- لیست علاقه‌مندی‌ها
+- ثبت‌نام، ورود و مسیرهای محافظت‌شده حساب کاربری
+- داشبورد حساب کاربری، پروفایل، آدرس‌ها، سفارش‌ها و علاقه‌مندی‌های حساب
+- صفحات محتوایی شامل درباره ما، تماس، ارسال، مرجوعی، راهنمای سایز، قوانین و حریم خصوصی
+- ذخیره‌سازی اطلاعات سبد خرید، علاقه‌مندی‌ها، سفارش‌ها و آدرس‌ها در `localStorage`
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## تکنولوژی‌ها
 
-Note: This will impact Vite dev & build performances.
+- React
+- Vite
+- React Router
+- Tailwind CSS
+- Lucide React
+- ESLint
 
-## Expanding the ESLint configuration
+## پیش‌نیازها
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+برای اجرای پروژه به Node.js و npm نیاز دارید.
+
+## نصب و اجرا
+
+ابتدا وابستگی‌ها را نصب کنید:
+
+```bash
+npm install
+```
+
+اجرای پروژه در محیط توسعه:
+
+```bash
+npm run dev
+```
+
+ساخت نسخه production:
+
+```bash
+npm run build
+```
+
+اجرای پیش‌نمایش نسخه production:
+
+```bash
+npm run preview
+```
+
+بررسی lint:
+
+```bash
+npm run lint
+```
+
+## ساختار پروژه
+
+```text
+src/
+  components/   کامپوننت‌های مشترک، layout و محصول
+  context/      مدیریت وضعیت سبد خرید، علاقه‌مندی‌ها و احراز هویت
+  data/         داده‌های محصولات و دسته‌بندی‌ها
+  pages/        صفحات اصلی اپلیکیشن
+  routes/       مسیرهای محافظت‌شده
+  utils/        توابع کمکی برای فیلتر، قیمت، سفارش‌ها و آدرس‌ها
+```
+
+## مسیرهای اصلی
+
+- `/` صفحه اصلی
+- `/products` همه محصولات
+- `/men` محصولات مردانه
+- `/women` محصولات زنانه
+- `/kids` محصولات بچگانه
+- `/new` محصولات جدید
+- `/sale` محصولات تخفیف‌دار
+- `/product/:id` جزئیات محصول
+- `/cart` سبد خرید
+- `/checkout` پرداخت
+- `/wishlist` علاقه‌مندی‌ها
+- `/account` حساب کاربری
+
+## مخزن
+
+GitHub: https://github.com/Its-Mohammad/style-store
